@@ -11,7 +11,7 @@ angular.module('home', []).config(function($stateProvider) {
         }
     });
 
-}).controller('HomeCtrl', function($scope, HomeService, countries) {
+}).controller('HomeCtrl', function($scope,$state, HomeService, countries) {
     $scope.homeCtrl = {
         countries: countries.data.result
     };
@@ -25,6 +25,10 @@ angular.module('home', []).config(function($stateProvider) {
         getCity(parseInt(stateId));
     };
 
+    $scope.showWeather = function() {
+        $state.go('details',{city:$scope.homeCtrl.selectedCity});
+    }
+
     function getState(countryId) {
         HomeService.getStatesList(countryId).then(function(data) {
             $scope.homeCtrl.states = data.data.result;
@@ -37,9 +41,8 @@ angular.module('home', []).config(function($stateProvider) {
         HomeService.getCitiesList(StateId).then(function(data) {
             $scope.homeCtrl.cities = data.data.result;
         });
-
-
     }
+
 
 
 
