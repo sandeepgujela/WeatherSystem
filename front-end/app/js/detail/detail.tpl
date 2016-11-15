@@ -5,25 +5,44 @@
             <div class="logo"></div>
         </div>
     </div>
-
-
-
     <div class="content border">
-
-	  	<article>
-	  	</article>
-
+        <md-card ng-if="detailCtrl.weatherData" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{detailCtrl.weatherData.name}}</span>
+                    <span class="md-subhead">
+                    {{detailCtrl.weatherData.dt | date}}
+                    </span>
+                </md-card-title-text>
+                <md-card-title-text>
+                    <span class="md-headline">{{detailCtrl.weatherData.main.temp}} K</span>
+                    <span class="md-subhead">
+                    Min :{{detailCtrl.weatherData.main.temp_min}} , Max :{{detailCtrl.weatherData.main.temp_max}} 
+                    </span>
+                </md-card-title-text>
+                <md-card-title-text>
+                    <span class="md-headline capitalize">{{detailCtrl.weatherData.weather[0].description}}</span>
+                    <span class="md-subhead">
+                          Humidity :  {{detailCtrl.weatherData.main.humidity}}                 
+                    </span>
+                    <span class="md-subhead">
+                          Pressure:
+                            {{detailCtrl.weatherData.main.pressure}}                 
+                    </span>
+                    <span class="md-subhead">
+                          Wind :  {{detailCtrl.weatherData.wind.speed}}                 
+                                            
+                    </span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-lg card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+        </md-card>
     </div>
-
-
-
-
-
-
     <div class="footer border">
     </div>
 </section>
-
 <!-- 
 http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getCountries
 http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getStates&countryId=101
@@ -32,4 +51,3 @@ http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getCiti
 http://api.openweathermap.org/data/2.5/weather?q=Delhi&APPID=2c5c539103edb7012dd64189c6a2322a
 
  -->
-

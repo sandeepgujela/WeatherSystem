@@ -12,8 +12,9 @@ angular.module('detail', []).config(function($stateProvider) {
     });
 
 }).controller('DetailCtrl', function($scope, weatherDetails) {
-    $scope.DetailCtrl = {
-        weatherData: weatherDetails.data
+    $scope.detailCtrl = {
+        weatherData: weatherDetails.data 
     };
-    console.log("weatherDetails", $scope.DetailCtrl.weatherData);
+
+    console.log("weatherDetails", $scope.detailCtrl.weatherData);
 });
