@@ -1,0 +1,32 @@
+.home-section {
+    .header {
+        height: 150px;
+        padding: 20px;
+        color: gray;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: 100% 100%;
+        background-image: url(../img/home_page_Bg.png);
+        .title {
+            font-size: $text-xxxl;
+        }
+        .logo-container {
+        	margin-top:5px;
+            background-color: #503770;
+            padding:10px;	
+            width: 150px;
+            .logo {
+            	height: 35px;
+                width: 130px;
+                background-image: url(../img/logo_fliplearn.png);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .content {
+        height: 50px;
+    }
+    .footer {
+        height: 50px;
+    }
+}
