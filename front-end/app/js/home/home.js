@@ -20,10 +20,22 @@ angular.module('home', []).config(function($stateProvider) {
         getState(countryId + 1);
 
     };
+    $scope.changeState = function(stateId) {
+        $scope.homeCtrl.selectedCity = {};
+        getCity(parseInt(stateId));
+    };
 
     function getState(countryId) {
         HomeService.getStatesList(countryId).then(function(data) {
             $scope.homeCtrl.states = data.data.result;
+            console.log("get state list", $scope.homeCtrl.states);
+
+        });
+    }
+
+    function getCity(StateId) {
+        HomeService.getCitiesList(StateId).then(function(data) {
+            $scope.homeCtrl.cities = data.data.result;
         });
 
 

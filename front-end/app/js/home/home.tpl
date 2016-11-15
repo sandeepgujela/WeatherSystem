@@ -20,17 +20,17 @@
 	        <md-input-container>
 	            <label>State</label>
 	            <md-select ng-model="homeCtrl.selectedState">
-	                <md-option ng-repeat="state in homeCtrl.states">
-	                    {{state}}
+	                <md-option ng-repeat="(key, value) in homeCtrl.states" ng-click="changeState(key)">
+	                    {{value}} 
 	                </md-option>
 	            </md-select>
 	        </md-input-container>
 
 	        <md-input-container>
 	            <label>City</label>
-	            <md-select ng-model="ctrl.userState">
-	                <md-option ng-repeat="country in homeCtrl.countries">
-	                    {{country}}
+	            <md-select ng-model="homeCtrl.selectedCity">
+	                <md-option ng-repeat="city in homeCtrl.cities">
+	                    {{city}}
 	                </md-option>
 	            </md-select>
 	        </md-input-container>
