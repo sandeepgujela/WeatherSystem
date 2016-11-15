@@ -10,8 +10,8 @@
 
 	        <md-input-container>
 	            <label>Country</label>
-	            <md-select ng-model="homeCtrl.selectedCountry" md-on-close="changeCountry()">
-	                <md-option ng-repeat="country in homeCtrl.countries">
+	            <md-select ng-model="homeCtrl.selectedCountry">
+	                <md-option ng-repeat="country in homeCtrl.countries" ng-click="changeCountry($index)">
 	                    {{country}}
 	                </md-option>
 	            </md-select>
@@ -19,9 +19,9 @@
 
 	        <md-input-container>
 	            <label>State</label>
-	            <md-select ng-model="ctrl.userState">
-	                <md-option ng-repeat="country in homeCtrl.countries">
-	                    {{country}}
+	            <md-select ng-model="homeCtrl.selectedState">
+	                <md-option ng-repeat="state in homeCtrl.states">
+	                    {{state}}
 	                </md-option>
 	            </md-select>
 	        </md-input-container>

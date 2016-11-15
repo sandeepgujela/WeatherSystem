@@ -15,14 +15,20 @@ angular.module('home', []).config(function($stateProvider) {
     $scope.homeCtrl = {
         countries: countries.data.result
     };
-    console.log("countries", $scope.homeCtrl.countries);
-    $scope.changeCountry = function() {
-        $scope.homeCtrl.selectedState="";
-        $scope.homeCtrl.selectedCity="";
+    $scope.changeCountry = function(countryId) {
+        $scope.homeCtrl.selectedState = {};
+        getState(countryId + 1);
 
-        console.log("changed the country",$scope.homeCtrl.selectedCountry);
+    };
+
+    function getState(countryId) {
+        HomeService.getStatesList(countryId).then(function(data) {
+            $scope.homeCtrl.states = data.data.result;
+        });
+
+
     }
-    function getState(country){
-        return HomeService.getStatesList(country);
-    }
+
+
+
 });
