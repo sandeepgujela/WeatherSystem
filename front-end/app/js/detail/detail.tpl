@@ -11,46 +11,12 @@
         </md-input-container>   
     </div>
 
-        <md-card ng-if="detailCtrl.weatherData" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">{{detailCtrl.weatherData.name}}</span>
-                    <span class="md-subhead">
-                    {{detailCtrl.weatherData.dt | date}}
-                    </span>
-                </md-card-title-text>
-
-                <md-card-title-text>
-                    <span class="md-headline">{{detailCtrl.weatherData.main.temp}} K</span>
-                    <span class="md-subhead">
-                    Min :{{detailCtrl.weatherData.main.temp_min}} , Max :{{detailCtrl.weatherData.main.temp_max}} 
-                    </span>
-                </md-card-title-text>
-
-                <md-card-title-text>
-                    <span class="md-headline capitalize">{{detailCtrl.weatherData.weather[0].description}}</span>
-                    <span class="md-subhead">
-                          Humidity :  {{detailCtrl.weatherData.main.humidity}}                 
-                    </span>
-                    <span class="md-subhead">
-                          Pressure:
-                            {{detailCtrl.weatherData.main.pressure}}                 
-                    </span>
-                    <span class="md-subhead">
-                          Wind :  {{detailCtrl.weatherData.wind.speed}}                 
-                                            
-                    </span>
-                </md-card-title-text>
-                
-            </md-card-title>
-        </md-card>
-
         <article ng-if="detailCtrl.weatherForcaste">
 
             <md-card ng-repeat="weatherForcaste in detailCtrl.weatherForcaste"  md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">{{detailCtrl.weatherData.name}}</span>
+                    <span class="md-headline">{{detailCtrl.location.name}},{{detailCtrl.location.country}}</span>
                     <span class="md-subhead">
                         {{weatherForcaste.dt_txt }}
                     </span>
