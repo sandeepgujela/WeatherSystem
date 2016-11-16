@@ -32,7 +32,6 @@ angular.module('home', []).config(function($stateProvider) {
     function getState(countryId) {
         HomeService.getStatesList(countryId).then(function(data) {
             $scope.homeCtrl.states = data.data.result;
-            console.log("get state list", $scope.homeCtrl.states);
 
         });
     }

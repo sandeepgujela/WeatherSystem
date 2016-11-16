@@ -5,7 +5,7 @@
             <div class="logo"></div>
         </div>
     </div>
-    <div class="content ">
+    <div class="content padding20">
     <div  layout="row" layout-align="left center" layout-align-xs="cetner center" layout-xs="column">
         <md-input-container>
             <label>Days</label>
