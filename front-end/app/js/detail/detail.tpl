@@ -1,10 +1,4 @@
-<section class="home-section" layout="column" class="border">
-    <div class="header " layout="row" layout-align="space-between center" layout-align-xs="none none" layout-xs="column">
-        <div class="title">Weather Forcast App</div>
-        <div class="logo-container">
-            <div class="logo"></div>
-        </div>
-    </div>
+
     <div class="content padding20">
     <div  layout="row" layout-align="left center" layout-align-xs="cetner center" layout-xs="column">
         <md-input-container>
@@ -91,14 +85,4 @@
 
 
     </div>
-    <div class="footer ">
-    </div>
-</section>
-<!-- 
-http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getCountries
-http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getStates&countryId=101
-http://iamrohit.in/lab/php_ajax_country_state_city_dropdown/api.php?type=getCities&stateId=172
 
-http://api.openweathermap.org/data/2.5/weather?q=Delhi&APPID=2c5c539103edb7012dd64189c6a2322a
-
- -->
