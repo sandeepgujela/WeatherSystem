@@ -1,6 +1,6 @@
 
     <div class="content ">
-	    <article class="location-container" layout="row" layout-align="space-around center" layout-align-xs="none none" layout-xs="column">
+	    <md-whiteframe class="location-container md-whiteframe-1dp" layout="row" layout-align="space-around center" layout-align-xs="none none" layout-xs="column">
 
 	        <md-input-container>
 	            <label>Country</label>
@@ -34,7 +34,7 @@
 	    <div layout="row" layout-align="center center"> 
 	       <md-button class="md-raised md-primary" ng-click="showWeather()">Weather</md-button>	
 	    </div>
-    </div>
+    </md-whiteframe>
 
 </section>
 

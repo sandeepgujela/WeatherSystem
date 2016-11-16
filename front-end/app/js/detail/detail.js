@@ -23,8 +23,7 @@ angular.module('detail', []).config(function($stateProvider) {
         WeatherService.getWeatherForcaste($stateParams.city, $scope.detailCtrl.selectedDays).success(function(response) {
             $scope.detailCtrl.weatherForcaste = [];
             var forCasteTill = new Date().getDate();
-            var forCasteTill = parseInt(forCasteTill) + parseInt($scope.detailCtrl.selectedDays);
-            
+            forCasteTill = parseInt(forCasteTill) + parseInt($scope.detailCtrl.selectedDays);
 
             for (i = 0; i < response.list.length; i++) {
                 if (new Date(response.list[i].dt_txt).getDate() <= forCasteTill) {

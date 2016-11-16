@@ -19,12 +19,14 @@
                     {{detailCtrl.weatherData.dt | date}}
                     </span>
                 </md-card-title-text>
+
                 <md-card-title-text>
                     <span class="md-headline">{{detailCtrl.weatherData.main.temp}} K</span>
                     <span class="md-subhead">
                     Min :{{detailCtrl.weatherData.main.temp_min}} , Max :{{detailCtrl.weatherData.main.temp_max}} 
                     </span>
                 </md-card-title-text>
+
                 <md-card-title-text>
                     <span class="md-headline capitalize">{{detailCtrl.weatherData.weather[0].description}}</span>
                     <span class="md-subhead">
@@ -39,9 +41,7 @@
                                             
                     </span>
                 </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-lg card-media"></div>
-                </md-card-title-media>
+                
             </md-card-title>
         </md-card>
 
@@ -76,9 +76,6 @@
                                             
                     </span>
                 </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-lg card-media"></div>
-                </md-card-title-media>
             </md-card-title>
         </md-card>
         </article>
