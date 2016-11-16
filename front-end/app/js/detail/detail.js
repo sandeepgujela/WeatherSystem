@@ -11,10 +11,19 @@ angular.module('detail', []).config(function($stateProvider) {
         }
     });
 
-}).controller('DetailCtrl', function($scope, weatherDetails) {
+}).controller('DetailCtrl', function($scope, weatherDetails,$stateParams,WeatherService) {
     $scope.detailCtrl = {
-        weatherData: weatherDetails.data 
+        weatherData: weatherDetails.data,
+        days:[1,2,3,4,5]
+
     };
 
-    console.log("weatherDetails", $scope.detailCtrl.weatherData);
+    $scope.getWeatherForcaste=function(){
+        // console.log("getting weather forcaste",$scope.detailCtrl.selectedDays,$stateParams.city);
+        WeatherService.getWeatherForcaste($stateParams.city,$scope.detailCtrl.selectedDays).success(function(response){
+            $scope.detailCtrl.weatherForcaste=response.list;
+            console.log("forcaste list",$scope.detailCtrl.weatherForcaste);
+
+        });
+    };
 });

@@ -27,7 +27,7 @@ angular.module('home', []).config(function($stateProvider) {
 
     $scope.showWeather = function() {
         $state.go('details',{city:$scope.homeCtrl.selectedCity});
-    }
+    };
 
     function getState(countryId) {
         HomeService.getStatesList(countryId).then(function(data) {
